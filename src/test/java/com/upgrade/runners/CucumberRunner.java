@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources",
         glue = "com/upgrade/steps_definitions",
         dryRun = false,
-        tags =   "@temp",
+        tags =   "@upgradeLogin",
         plugin = {"html:target/default-cucumber-reports",
                 "json:target/cucumber.json",
                 "rerun:target/rerun.txt"

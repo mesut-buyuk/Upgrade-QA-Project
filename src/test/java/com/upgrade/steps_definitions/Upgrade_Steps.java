@@ -8,10 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Upgrade_Steps {
@@ -118,7 +115,7 @@ public class Upgrade_Steps {
           System.out.println("Loan Pre Approved");
       }else {
           Assert.assertEquals(infoGetLoanPage.saveOffer2(),scopeData.get("fail"));
-          System.out.println("Loan Dıd Not Approved");
+          System.out.println("Loan Did Not Approved");
       }
 
     }

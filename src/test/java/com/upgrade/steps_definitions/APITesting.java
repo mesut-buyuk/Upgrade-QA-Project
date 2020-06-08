@@ -1,11 +1,12 @@
 package com.upgrade.steps_definitions;
 
 import com.upgrade.POJO.LoginPOJO;
-import com.upgrade.pages.LoginPage;
 import org.json.simple.JSONObject;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
+
+
 import static io.restassured.RestAssured.*;
 
 public class APITesting {
@@ -13,9 +14,9 @@ public class APITesting {
     @Test
     public void postRequest () {
 
-           JSONObject obj = new JSONObject();
-         obj.put("username","coding.challenge.login@upgrade.com");
-         obj.put("password","On$3XcgsW#9q");
+        JSONObject obj = new JSONObject();
+        obj.put("username","coding.challenge.login@upgrade.com");
+        obj.put("password","On$3XcgsW#9q");
 
         Response response =
                 given()
@@ -62,4 +63,8 @@ public class APITesting {
 
 
 }
+
+
+
+
 

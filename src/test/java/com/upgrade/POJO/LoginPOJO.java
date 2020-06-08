@@ -47,4 +47,5 @@ public class LoginPOJO {
     public void setLoansInReviewPOJO(LoansInReviewPOJO loansInReviewPOJO) {
         this.loansInReviewPOJO = loansInReviewPOJO;
     }
+
 }

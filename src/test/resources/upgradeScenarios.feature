@@ -1,7 +1,7 @@
 
-Feature: Create new car
+Feature: Verify Loan Amount
 
-  @temp
+  @VerifyLoanAmount
   Scenario: Verify via the UI that as a borrower - you are seeing loan offers, upon filling the required form fields with valid inputs
     Given Client wants to navigate to "https://www.credify.tech/phone/nonDMFunnel"
     And Client wants to enter loan amount as "2,000" and select purpose as Business
