@@ -14,7 +14,10 @@ import java.util.Map;
 public class Upgrade_Steps {
 
     InfoGetLoanPage infoGetLoanPage = new InfoGetLoanPage();
+    //To call the methods we need to create objects
     Map<String,String> scopeData = new HashMap<>();
+    //I used this one for verify offer
+    //when we apply we save offer in scope data and after that we log out and once we login we match the offer
 
     LoginPage loginPage = new LoginPage();
     Driver urlDriver = new Driver();

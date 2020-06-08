@@ -22,6 +22,7 @@ public class InfoGetLoanPage extends BrowserUtils {
 
 
     private static Logger logger = Logger.getLogger(InfoGetLoanPage.class);
+    //this is for seeing logs comments
 
     @FindBy(tagName = "select")
     public WebElement selectPurpose;

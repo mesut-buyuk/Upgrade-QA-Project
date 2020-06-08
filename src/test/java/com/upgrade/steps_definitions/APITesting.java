@@ -1,6 +1,8 @@
 package com.upgrade.steps_definitions;
 
 import com.upgrade.POJO.LoginPOJO;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import org.json.simple.JSONObject;
 import io.restassured.response.Response;
 import org.junit.Assert;
@@ -11,9 +13,9 @@ import static io.restassured.RestAssured.*;
 
 public class APITesting {
 
-    @Test
-    public void postRequest () {
 
+    @Given("Client wants to Login with authorized user")
+    public void client_wants_to_Login_with_authorized_user() {
         JSONObject obj = new JSONObject();
         obj.put("username","coding.challenge.login@upgrade.com");
         obj.put("password","On$3XcgsW#9q");
@@ -26,8 +28,8 @@ public class APITesting {
                         .body(obj)
                         .post("https://credapi.credify.tech/api/brportorch/v2/login");
 
-        LoginPOJO loginPOJO = response.body().as(LoginPOJO.class);
-        System.out.println(loginPOJO.getLoansInReviewPOJO().getProductType());
+        //    LoginPOJO loginPOJO = response.body().as(LoginPOJO.class);
+        //    System.out.println(loginPOJO.getLoansInReviewPOJO().getProductType());
 
 
 
@@ -38,8 +40,8 @@ public class APITesting {
         System.out.println(response.prettyPrint());
     }
 
-    @Test
-    public void postRequestUnauthorized() {
+    @And("Client wants to Login with unauthorized user")
+    public void client_wants_to_Login_with_unauthorized_user() {
 
         JSONObject obj = new JSONObject();
         obj.put("username","coding.challenge.login.Unauthorized@upgrade.com");
@@ -60,6 +62,8 @@ public class APITesting {
         System.out.println(response.statusCode());
         System.out.println(response.prettyPrint());
     }
+
+
 
 
 }
